@@ -1,0 +1,21 @@
+IOT temprature
+
+
+int tempsensor;
+void setup()
+{
+ pinMode(A2,INPUT);
+pinMode(12,OUTPUT);
+ pinMode(13,OUTPUT);
+
+}
+void loop()
+{
+ tempsensor=analogRead(A2);
+ if(tempsensor>=200)
+ {
+ digitalWrite(13,HIGH);
+ tone(12,500,500);
+ }
+ digitalWrite(13,LOW);
+}
